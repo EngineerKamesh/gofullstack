@@ -1,0 +1,6 @@
+*~
+*.swp
+*.swo
+*.tmp
+*.out
+.DS_Store
