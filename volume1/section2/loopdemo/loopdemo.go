@@ -1,3 +1,4 @@
+// Various examples of Go's for loop.
 package main
 
 import (

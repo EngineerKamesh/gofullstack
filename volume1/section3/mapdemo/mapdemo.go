@@ -1,3 +1,5 @@
+// An example of building a map having keys representating nations, and values representing
+// the respective nation's capital.
 package main
 
 import (

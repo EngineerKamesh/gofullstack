@@ -1,3 +1,4 @@
+// A username syntax checker for the GopherFace web application.
 package main
 
 import (

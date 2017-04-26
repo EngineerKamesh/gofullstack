@@ -1,3 +1,4 @@
+// Various examples of functions in Go.
 package main
 
 import "fmt"

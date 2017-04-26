@@ -1,3 +1,4 @@
+// An example of declaring a constant grouping with an iota enumerator.
 package main
 
 import (

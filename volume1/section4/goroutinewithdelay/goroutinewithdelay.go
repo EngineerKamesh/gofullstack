@@ -1,3 +1,4 @@
+// An example of a goroutine with a delay introduced so the goroutine can complete.
 package main
 
 import (

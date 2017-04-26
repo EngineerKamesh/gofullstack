@@ -1,3 +1,5 @@
+// An example of a data race condition.
+// Execute the program like so: "go run -race racedemo.go" to detect the race condition.
 package main
 
 import "fmt"

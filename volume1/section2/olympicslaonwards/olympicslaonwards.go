@@ -1,3 +1,4 @@
+// An example of using Go's iota enumerator to model the year and city where the summer Olympics took place.
 package main
 
 import "fmt"

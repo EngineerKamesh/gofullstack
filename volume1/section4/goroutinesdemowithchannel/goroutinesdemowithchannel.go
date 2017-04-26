@@ -1,3 +1,4 @@
+// An example of using a channel to wait for a goroutine to complete.
 package main
 
 import (

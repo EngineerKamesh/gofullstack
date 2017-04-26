@@ -1,3 +1,4 @@
+// An example of ranging over a channel.
 package main
 
 import "fmt"

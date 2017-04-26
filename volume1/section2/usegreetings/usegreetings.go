@@ -1,4 +1,4 @@
-// In this example we use the greetingspackage
+// An example of using functionality from a package.
 package main
 
 import (

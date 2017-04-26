@@ -1,3 +1,4 @@
+// A demonstration program using the simpleshape package.
 package main
 
 import (

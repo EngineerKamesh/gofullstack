@@ -1,3 +1,4 @@
+// Various examples to declare Go's numeric types.
 package main
 
 import "fmt"

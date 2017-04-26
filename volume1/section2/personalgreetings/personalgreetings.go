@@ -1,3 +1,4 @@
+// An example of using a command line flag.
 package main
 
 import (

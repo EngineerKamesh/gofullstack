@@ -1,5 +1,4 @@
 // A concurrent computation of pi using Nilakantha's formula.
-
 package main
 
 import (

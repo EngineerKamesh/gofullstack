@@ -1,3 +1,4 @@
+// An example of declaring a switch statement.
 package main
 
 import "fmt"

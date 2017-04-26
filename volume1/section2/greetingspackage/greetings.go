@@ -1,3 +1,6 @@
+// Package greetingspackage is a demonstration package to show how to declare a package,
+// create exported/unexported functions in the package, and create an exported variable
+// from the package.
 package greetingspackage
 
 import "fmt"

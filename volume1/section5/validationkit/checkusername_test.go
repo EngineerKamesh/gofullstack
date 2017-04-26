@@ -22,7 +22,7 @@ func TestCheckUsernameSyntaxMaximumCharacterLength(t *testing.T) {
 	result := CheckUsernameSyntax("aaaaaaaaaaaaaaaa")
 
 	if result != false {
-		t.Errorf("Failed the minimum character check.")
+		t.Errorf("Failed the maximum character check.")
 
 	}
 

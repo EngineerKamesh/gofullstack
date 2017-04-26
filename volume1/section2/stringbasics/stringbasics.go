@@ -1,3 +1,5 @@
+// String examples covering declaration, literal definition, accessing character at value
+// and concatenating strings using the + operator.
 package main
 
 import "fmt"

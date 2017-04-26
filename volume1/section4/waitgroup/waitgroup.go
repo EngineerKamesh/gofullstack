@@ -1,3 +1,4 @@
+// An example of concurrently fetching web site URLs using a WaitGroup.
 package main
 
 import (

@@ -1,3 +1,4 @@
+// An example of a multidimensional array, a 3x4 matrix.
 package main
 
 import (

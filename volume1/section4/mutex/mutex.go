@@ -1,3 +1,4 @@
+// An example of solving the data race condition using a mutex.
 package main
 
 import (

@@ -1,3 +1,4 @@
+// An example of sending and receiving a value through a channel.
 package main
 
 import "fmt"

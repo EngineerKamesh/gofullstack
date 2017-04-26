@@ -1,3 +1,4 @@
+// An example of a buffered channel (asynchronous).
 package main
 
 import "fmt"

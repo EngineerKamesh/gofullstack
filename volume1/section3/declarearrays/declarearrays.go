@@ -1,3 +1,4 @@
+// Some examples of array declarations and showing how arrays are treated as values in Go.
 package main
 
 import "fmt"

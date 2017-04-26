@@ -1,3 +1,4 @@
+// An example to model a light switch using a boolean type.
 package main
 
 import "fmt"

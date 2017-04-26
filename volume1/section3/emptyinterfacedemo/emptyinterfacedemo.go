@@ -1,3 +1,4 @@
+// An example of an empty interface, and some useful things we can do with it.
 package main
 
 import (

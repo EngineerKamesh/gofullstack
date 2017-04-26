@@ -1,3 +1,4 @@
+// An example showing how to declare a slice and perform various operations using a slice.
 package main
 
 import "fmt"

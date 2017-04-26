@@ -1,3 +1,4 @@
+// An example of creating a new instance of a Social Media Post type.
 package main
 
 import (

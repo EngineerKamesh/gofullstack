@@ -1,3 +1,4 @@
+// An example of a goroutine.
 package main
 
 import (

@@ -1,3 +1,4 @@
+// Examples of conditional logic and impact on the flow of control.
 package main
 
 import "fmt"

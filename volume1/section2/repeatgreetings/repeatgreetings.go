@@ -1,3 +1,4 @@
+// An example of using a command line argument.
 package main
 
 import (
