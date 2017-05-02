@@ -2,7 +2,7 @@
 
 ## Dedication
 
-This video course is dedicated to my father, C.V. Balasubramanian.
+This learning path is dedicated to my father, C.V. Balasubramanian.
 
 ## Special Thanks
 
