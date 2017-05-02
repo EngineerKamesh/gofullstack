@@ -11,11 +11,11 @@ A special thanks goes to my wife, Veena, and our daughter, Kanika.
 ## Thanks
 
 Additional thanks to: Mahboobeh Mahmoodi, Don Johnson, Aman Kapoor,
-Riddhi Tuljapurkar, Nisheeth Jaiswal, Merint Mathew, Satish Talim,
-Gautam Rege, William Kennedy, Daniel Whitenack, Francesc Campoy,
-Mat Ryer, Ashley McNamara, Nikhita Raghunath, Takuya Ueda, Mina 
-Andrawos, Todd McLeod, The Golang Team, Richard Musiol, Dmitri 
-Shuralyov, and The GopherJS Team. 
+Olga Shalakhina, Riddhi Tuljapurkar, Nisheeth Jaiswal, Merint Mathew,
+Satish Talim, Gautam Rege, William Kennedy, Daniel Whitenack, Francesc 
+Campoy, Mat Ryer, Ashley McNamara, Nikhita Raghunath, Takuya Ueda, Mina 
+Andrawos, Todd McLeod, The Golang Team, Richard Musiol, Dmitri Shuralyov,
+and The GopherJS Team. 
 
 ## Attributions
 
