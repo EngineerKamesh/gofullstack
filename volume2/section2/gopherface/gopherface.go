@@ -2,12 +2,13 @@ package main
 
 import (
 	"net/http"
+	"os"
 
-	//ghandlers "github.com/gorilla/handlers"
-	"github.com/gorilla/mux"
-	//"github.com/EngineerKamesh/gofullstack/volume2/section2/gopherface/endpoints"
+	"github.com/EngineerKamesh/gofullstack/volume2/section2/gopherface/endpoints"
 	"github.com/EngineerKamesh/gofullstack/volume2/section2/gopherface/handlers"
-	//"github.com/EngineerKamesh/gofullstack/volume2/section2/gopherface/middleware"
+	"github.com/EngineerKamesh/gofullstack/volume2/section2/gopherface/middleware"
+	ghandlers "github.com/gorilla/handlers"
+	"github.com/gorilla/mux"
 )
 
 const (
@@ -29,15 +30,15 @@ func main() {
 	r.HandleFunc("/triggerpanic", handlers.TriggerPanicHandler).Methods("GET")
 	r.HandleFunc("/foo", handlers.FooHandler).Methods("GET")
 
-	//r.HandleFunc("/restapi/socialmediapost/{username}", endpoints.FetchPostsEndpoint).Methods("GET")
-	//r.HandleFunc("/restapi/socialmediapost/{postid}", endpoints.CreatePostEndpoint).Methods("POST")
-	//r.HandleFunc("/restapi/socialmediapost/{postid}", endpoints.UpdatePostEndpoint).Methods("PUT")
-	//r.HandleFunc("/restapi/socialmediapost/{postid}", endpoints.DeletePostEndpoint).Methods("DELETE")
+	r.HandleFunc("/restapi/socialmediapost/{username}", endpoints.FetchPostsEndpoint).Methods("GET")
+	r.HandleFunc("/restapi/socialmediapost/{postid}", endpoints.CreatePostEndpoint).Methods("POST")
+	r.HandleFunc("/restapi/socialmediapost/{postid}", endpoints.UpdatePostEndpoint).Methods("PUT")
+	r.HandleFunc("/restapi/socialmediapost/{postid}", endpoints.DeletePostEndpoint).Methods("DELETE")
 
-	http.Handle("/", r)
+	//http.Handle("/", r)
 	//http.Handle("/", ghandlers.LoggingHandler(os.Stdout, r))
 	//http.Handle("/", middleware.PanicRecoveryHandler(ghandlers.LoggingHandler(os.Stdout, r)))
-	//http.Handle("/", middleware.ContextExampleHandler(middleware.PanicRecoveryHandler(ghandlers.LoggingHandler(os.Stdout, r))))
+	http.Handle("/", middleware.ContextExampleHandler(middleware.PanicRecoveryHandler(ghandlers.LoggingHandler(os.Stdout, r))))
 
 	http.ListenAndServe(WEBSERVERPORT, nil)
 
