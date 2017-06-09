@@ -1,0 +1,26 @@
+<html>
+<head>
+<title>Upload Image</title>
+<link rel="stylesheet" type="text/css" href="/static/css/pure.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/gopherface.css" />
+</head>
+<body>
+<h1>Gopherface - Upload Image</h1>
+
+<div class="formContainer uploadFormContainer">
+<form enctype="multipart/form-data" action="/upload-image" method="post" class="pure-form pure-form-aligned">
+<fieldset>
+
+	<fieldset>
+	<label for="imagefile">Image File</label>
+	<input id="imagefile" type="file" name="imagefile" />
+	</fieldset>
+
+	<input type="submit" class="pure-button pure-input-1-2 pure-button-primary" value="Upload Image">
+
+<fieldset>
+</form>
+</div>
+
+</body>
+</html>
