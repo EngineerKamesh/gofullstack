@@ -28,7 +28,7 @@ func DisplayPostPreview(w http.ResponseWriter, r *http.Request, p *PostForm) {
 
 	moodState, _ := strconv.Atoi(p.Fields["mood"])
 	post := socialmedia.NewPost("Anonymous Gopher", socialmedia.MoodState(moodState), p.Fields["caption"], p.Fields["messageBody"], "", "", "", nil)
-	RenderUnsafeTemplate(w, "./templates/socialmediapost.html", post)
+	RenderTemplate(w, "./templates/socialmediapost.html", post)
 }
 
 func PopulatePostFormFields(r *http.Request, p *PostForm) {
