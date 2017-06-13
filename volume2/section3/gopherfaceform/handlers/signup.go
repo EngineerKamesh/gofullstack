@@ -18,7 +18,7 @@ func DisplaySignUpForm(w http.ResponseWriter, r *http.Request, s *SignUpForm) {
 }
 
 func DisplayConfirmation(w http.ResponseWriter, r *http.Request, s *SignUpForm) {
-	RenderUnsafeTemplate(w, "./templates/signupconfirmation.html", s)
+	RenderTemplate(w, "./templates/signupconfirmation.html", s)
 }
 
 func PopulateFormFields(r *http.Request, s *SignUpForm) {

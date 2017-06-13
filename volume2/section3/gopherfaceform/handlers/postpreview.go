@@ -19,7 +19,6 @@ type PostForm struct {
 var MoodStates map[string]int
 var MoodEmoji map[string]string
 
-// DisplaySignUpForm displays the Sign Up form
 func DisplayPostForm(w http.ResponseWriter, r *http.Request, p *PostForm) {
 	RenderTemplate(w, "./templates/postform.html", p)
 }
@@ -39,18 +38,16 @@ func PopulatePostFormFields(r *http.Request, p *PostForm) {
 
 }
 
-// ValidateSignUpForm validates the Sign Up form's fields
 func ValidatePostForm(w http.ResponseWriter, r *http.Request, p *PostForm) {
 
 	p.CurrentMood, _ = strconv.Atoi(r.FormValue("mood"))
 
 	PopulatePostFormFields(r, p)
-	// Check if caption was filled out
+
 	if r.FormValue("caption") == "" {
 		p.Errors["captionError"] = "The caption field is required."
 	}
 
-	// Check if first name was filled out
 	if r.FormValue("messageBody") == "" {
 		p.Errors["messageBodyError"] = "The post message body is required."
 	}
@@ -80,7 +77,7 @@ func PostPreviewHandler(w http.ResponseWriter, r *http.Request) {
 	case "POST":
 		ValidatePostForm(w, r, &p)
 	default:
-		DisplayPostPreview(w, r, &p)
+		DisplayPostForm(w, r, &p)
 	}
 
 }
