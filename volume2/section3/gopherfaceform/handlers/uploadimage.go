@@ -71,6 +71,8 @@ func ProcessUploadImage(w http.ResponseWriter, r *http.Request, u *UploadImageFo
 			log.Println("Encountered error while resizing image:", err)
 		}
 
+		defer thumbImageFile.Close()
+
 		png.Encode(thumbImageFile, thumbImage)
 
 		m := make(map[string]string)
