@@ -27,6 +27,7 @@ func ProcessUploadVideo(w http.ResponseWriter, r *http.Request, u *UploadVideoFo
 
 	if err != nil {
 		log.Println("Encountered error when attempting to read uploaded file: ", err)
+		return
 	}
 
 	randomFileName := GenerateUUID()

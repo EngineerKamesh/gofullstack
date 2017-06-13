@@ -28,6 +28,7 @@ func ProcessUploadImage(w http.ResponseWriter, r *http.Request, u *UploadImageFo
 
 	if err != nil {
 		log.Println("Encountered error when attempting to read uploaded file: ", err)
+		return
 	}
 
 	randomFileName := GenerateUUID()
@@ -62,6 +63,7 @@ func ProcessUploadImage(w http.ResponseWriter, r *http.Request, u *UploadImageFo
 
 		if err != nil {
 			log.Println("Encountered Error while decoding image file: ", err)
+			return
 		}
 
 		thumbImage := resize.Resize(270, 0, img, resize.Lanczos3)
@@ -69,6 +71,7 @@ func ProcessUploadImage(w http.ResponseWriter, r *http.Request, u *UploadImageFo
 
 		if err != nil {
 			log.Println("Encountered error while resizing image:", err)
+			return
 		}
 
 		defer thumbImageFile.Close()
