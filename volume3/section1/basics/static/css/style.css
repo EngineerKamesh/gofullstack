@@ -1,0 +1,38 @@
+body {
+	font-family: arial,helvetica;
+	font-size: 12pt;
+}
+
+#welcomeContainer {
+	padding-top: 3px;
+	text-align: center;
+}
+
+#welcomeMessage {
+	margin-top: 54px;
+}
+
+#copyright_notice {
+	display: block;
+	text-align: center;
+	margin: 0;
+	margin-bottom:9px;
+	width: 100%;
+}
+
+#copyright_notice p {
+	font-size: 9pt;
+}
+
+footer {
+	margin-top: 72px;
+}
+
+h1 {
+	margin-left: 36px !important;
+}
+
+.example {
+	margin-left: 36px;
+	margin-bottom: 108px;
+}

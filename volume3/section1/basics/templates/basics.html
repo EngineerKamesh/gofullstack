@@ -1,0 +1,67 @@
+<head>
+	<title>Basics</title>	
+	<link rel="stylesheet" type="text/css" href="/static/css/style.css">
+	<link rel="icon" type="image/png" href="/static/images/isomorphic_go_icon.png">
+	<link rel="stylesheet" href="/static/css/pure-min.css">
+	<script src="/static/js/client.js" type="text/javascript"></script>
+</head>
+<body>
+
+
+<h1>GopherJS Front-End Examples</h1>
+
+<div class="example">
+<form class="pure-form">
+	<fieldset class="pure-group">
+
+	<h2>Example: Display Alert Message</h2>
+	</fieldset>
+	<fieldset class="pure-control-group">
+	<label for="messageInput">Alert Message: </label>
+	<input id="messageInput" type="text" value="Hello Gopher!" />
+	</fieldset>
+	<fieldset class="pure-group">
+
+	<button id="alertMessageJSGlobal" type="button" class="pure-button pure-button-primary">Display Alert Message using js.Global</button>
+	<button id="alertMessageDOM" type="button" class="pure-button pure-button-primary">Display Alert Message using dom package</button>
+</fieldset>
+</form>
+</div>
+
+<div class="example">
+	<form class="pure-form">
+	<fieldset class="pure-group">
+		<h2>Example: Change An Element's CSS Style Property</h2>
+	</fieldset>
+	<fieldset class="pure-group" style="min-height: 272px">
+		<img id="isomorphicGopher" border="0" src="/static/images/isomorphic_go_logo.png">
+	</fieldset>
+	<fieldset class="pure-group">
+		<button id="showGopher" type="button" class="pure-button pure-button-primary">Show Gopher</button>
+		<button id="hideGopher" type="button" class="pure-button pure-button-primary">Hide Gopher</button>
+	</fieldset>
+	</form>
+</div>
+
+<div class="example">
+	<h2>Example: JavaScript Builtin Functionality for typeof operation</h2>
+	<button id="builtinDemoButton" type="button" class="pure-button pure-button-primary">Builtin Demo</button>
+</div>
+
+<div class="example">
+	<form class="pure-form">
+	<fieldset class="pure-group">
+		<h2>Example: XHR Post</h2>
+	</fieldset>
+	<fieldset class="pure-control-group">
+		<label for="textToLowercase">Enter Text to Lowercase: </label>
+		<input id="textToLowercase" type="text" placeholder="Enter some text here to lowercase." value="GopherJS" />
+	</fieldset>
+	<fieldset class="pure-group">
+		<button id="lowercaseTransformButton" type="button" class="pure-button pure-button-primary">Lowercase It!</button>
+	</fieldset>
+	</form>
+</div>
+
+</body>
+</html>

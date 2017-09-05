@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>3D Gopher</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<style>
+			body {
+				font-family: Monospace;
+				background-color: #ffffff;
+				margin: 0px;
+				overflow: hidden;
+			}
+
+			#info {
+				color: #fff;
+				position: absolute;
+				top: 10px;
+				width: 100%;
+				text-align: center;
+				z-index: 100;
+				display:block;
+
+			}
+
+			a { color: skyblue }
+			.button { background:#999; color:#eee; padding:0.2em 0.5em; cursor:pointer }
+			.highlight { background:orange; color:#fff; }
+
+			span {
+				display: inline-block;
+				width: 60px;
+				float: left;
+				text-align: center;
+			}
+
+			canvas {
+				background-color: transparent;
+			}
+
+		</style>
+	</head>
+	<body>
+		<script src="/js/three.js"></script>
+		<script src="/js/OBJLoader.js"></script>
+			<script>
+
+
+function resizeCanvasToDisplaySize(canvas) {
+  const width  = canvas.clientWidth;
+  const height = canvas.clientHeight;
+  if (canvas.width !== width || canvas.height !== height) {
+    canvas.width  = width;
+    canvas.height = height;
+  }
+}
+
+function panCamera(camera, cameraTarget) {
+	var timer = Date.now() * 0.0005;
+	camera.position.x = Math.cos(timer) * 2.7 * -1;
+	camera.position.z = Math.sin(timer) * 2.7;
+	camera.lookAt( cameraTarget );
+}
+
+</script>
+
+	<script src="/js/3dgopherresize.js"></script>
+
+	</body>
+</html>
+
