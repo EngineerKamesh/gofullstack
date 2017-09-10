@@ -1,0 +1,41 @@
+#inputFormContainer {
+	margin-left: 36px;
+}
+
+#storageContents {
+	padding-left: 18px;
+	border: 1px solid #bbb;
+	min-height: 360px;
+	width: 630px;
+	height: 360px;
+	overflow-y: auto;
+}
+
+dl{
+  letter-spacing:-0.31em;
+  *letter-spacing:normal;
+  word-spacing:-0.43em;
+}
+
+dl dt,
+dl dd {
+  display:inline-block;
+  *display:inline;
+  zoom:1;
+  letter-spacing:normal;
+  word-spacing:normal;
+  vertical-align:top;
+  margin:0;
+}
+
+dl dt{
+  font-weight:600;
+  width:48%;
+  padding: 0 2% 0.5em 0;
+}
+
+dl dd{
+  margin-right:-1px;
+  width:50%;
+  padding: 0 0 0.5em 0;
+}

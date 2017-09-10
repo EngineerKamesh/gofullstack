@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Local Storage Demo</title>
+		<link rel="stylesheet" href="/static/css/pure-min.css">
+		<link rel="stylesheet" type="text/css" href="/static/css/style.css">
+		<script src="/static/js/client.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<div id="inputFormContainer">
+			<form class="pure-form">
+			<fieldset class="pure-group">
+			<h2>Local Storage Demo</h2>
+			</fieldset>
+			<fieldset class="pure-group" style="min-height: 272px">
+			<div id="storageContents">
+				<dl id="itemList">
+				</dl>
+			</div>
+			</fieldset>
+
+			<fieldset class="pure-control-group">
+			<label for="messageInput">Key: </label>
+			<input id="itemKey" type="text" value="" />
+			<label for="messageInput">Value: </label>
+			<input id="itemValue" type="text" value="" />
+
+			</fieldset>
+
+			<fieldset class="pure-control-group">
+			</fieldset>
+
+			<fieldset class="pure-group">
+				<button id="saveButton" type="button" class="pure-button pure-button-primary">Save</button>
+				<button id="clearAllButton" type="button" class="pure-button pure-button-primary">Clear All</button>
+			</fieldset>
+			</form>
+		</div>
+	</body>
+</html>
