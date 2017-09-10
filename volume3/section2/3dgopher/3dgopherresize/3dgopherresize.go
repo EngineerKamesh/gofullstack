@@ -64,21 +64,6 @@ func initialize() {
 	loader := JS.Get("THREE").Get("OBJLoader").New()
 	loader.Call("load", "/obj/gogopher.obj", func(mesh *js.Object) {
 
-		/*
-			gopherMeshPhongMaterial := &MeshPhongMaterialData{Object: js.Global.Get("Object").New()}
-			gopherMeshPhongMaterial.Color = 0xF6CA5B // yellow
-			gopherMeshPhongMaterial.Specular = 0x111111
-			gopherMeshPhongMaterial.Shininess = 200
-
-			material := JS.Get("THREE").Get("MeshPhongMaterial").New(gopherMeshPhongMaterial)
-			mesh.Call("traverse", func(child *js.Object) {
-				if jsbuiltin.InstanceOf(child, JS.Get("THREE").Get("Mesh")) {
-					child.Set("material", material)
-					println(material)
-				}
-
-			})
-		*/
 		mesh.Get("position").Call("set", 0.06, -0.45, 0.7)
 		mesh.Get("scale").Call("set", 0.004, 0.0054, 0.004)
 		mesh.Set("castsShadow", true)
