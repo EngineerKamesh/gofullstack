@@ -24,9 +24,7 @@ func initializeEventHandlers(env *common.Env) {
 }
 
 func run() {
-	println("GopherFace on the client-side!")
-
-	println("reached main")
+	println("GopherFace is on the client-side, thanks to GopherJS!")
 
 	templateSetChannel := make(chan *isokit.TemplateSet)
 	go isokit.FetchTemplateBundle(templateSetChannel)
@@ -34,8 +32,6 @@ func run() {
 
 	env := common.Env{}
 	env.TemplateSet = ts
-	println("env.TemplateSet: ", env.TemplateSet)
-
 	env.Window = dom.GetWindow()
 	env.Document = dom.GetWindow().Document()
 	env.PrimaryContent = env.Document.GetElementByID("primaryContent")
@@ -44,7 +40,6 @@ func run() {
 	r.Handle("/feed", handlers.FeedHandler(&env))
 	r.Handle("/friends", handlers.FriendsHandler(&env))
 	r.Handle("/profile", handlers.MyProfileHandler(&env))
-	r.Handle("/profile/{username}", handlers.ProfileHandler(&env))
 	r.Listen()
 
 	initializeEventHandlers(&env)

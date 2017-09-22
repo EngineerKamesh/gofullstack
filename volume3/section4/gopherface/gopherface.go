@@ -54,8 +54,7 @@ func main() {
 	r.Handle("/login", handlers.LoginHandler(&env)).Methods("GET", "POST")
 	r.HandleFunc("/logout", handlers.LogoutHandler).Methods("GET", "POST")
 
-	r.Handle("/feed", middleware.GatedContentHandler(handlers.FeedHandler(&env)))
-	//.Methods("GET")
+	r.Handle("/feed", middleware.GatedContentHandler(handlers.FeedHandler(&env))).Methods("GET")
 	r.Handle("/friends", middleware.GatedContentHandler(handlers.FriendsHandler(&env))).Methods("GET")
 	r.Handle("/profile", middleware.GatedContentHandler(handlers.MyProfileHandler(&env))).Methods("GET")
 	r.Handle("/find", middleware.GatedContentHandler(handlers.FindHandler)).Methods("GET,POST")
