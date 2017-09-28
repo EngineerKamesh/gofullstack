@@ -6,12 +6,11 @@
 <div id="gopherProfileContainer">
 
 	<div id="gopherPhoto">
-					{{if eq .ProfileImagePath ""}}
-					<img id="profileImage" src="/static/images/gogopher.png" height="180" >
-					{{else}}
-					<img id="profileImage" src="{{.ProfileImagePath}}" height="180" >
-					{{end}}
-
+		{{if eq .ProfileImagePath ""}}
+		<img id="profileImage" src="/static/images/gogopher.png" height="180" >
+		{{else}}
+		<img id="profileImage" src="{{.ProfileImagePath}}" height="180" >
+		{{end}}
 	</div>
 
 	<div id="gopherUsername">
@@ -35,16 +34,11 @@
 
 </div>
 
-
 <div id="feedContainer">
-
 
 </div>
 
-
-
 <div id="followingContainer">
-
 
 </div>
 

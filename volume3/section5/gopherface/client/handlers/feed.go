@@ -38,7 +38,7 @@ func InitializeFeedEventHandlers(env *common.Env) {
 		postForm = forms.NewSocialMediaPostForm(nil)
 	}
 
-	postButton := D.GetElementByID("postButton").(*dom.HTMLButtonElement)
+	postButton := env.Document.GetElementByID("postButton").(*dom.HTMLButtonElement)
 	postButton.AddEventListener("click", false, func(event dom.Event) {
 		VerifyPostForm(env, event, postForm)
 	})
@@ -55,9 +55,9 @@ func VerifyPostForm(env *common.Env, event dom.Event, postForm *forms.SocialMedi
 	validationResult := postForm.Validate()
 	if validationResult == true {
 
-		caption := D.GetElementByID("caption").(*dom.HTMLInputElement).Value
-		messageBody := D.GetElementByID("messageBody").(*dom.HTMLTextAreaElement).Value
-		mood := D.GetElementByID("mood").(*dom.HTMLSelectElement).Value
+		caption := env.Document.GetElementByID("caption").(*dom.HTMLInputElement).Value
+		messageBody := env.Document.GetElementByID("messageBody").(*dom.HTMLTextAreaElement).Value
+		mood := env.Document.GetElementByID("mood").(*dom.HTMLSelectElement).Value
 
 		p := socialmedia.Post{}
 		p.Caption = caption
@@ -116,7 +116,7 @@ func PopulateFeedPosts(env *common.Env) {
 		posts[i].TimeCreated = time.Unix(int64(posts[i].TimeCreatedUnixTS), 0)
 	}
 
-	postsContainer := D.GetElementByID("postsContainer").(*dom.HTMLDivElement)
+	postsContainer := env.Document.GetElementByID("postsContainer").(*dom.HTMLDivElement)
 	env.TemplateSet.Render("partials/feed_posts", &isokit.RenderParams{Data: posts, Disposition: isokit.PlacementReplaceInnerContents, Element: postsContainer})
 
 }

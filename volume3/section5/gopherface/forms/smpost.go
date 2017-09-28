@@ -18,7 +18,7 @@ var MoodStates map[string]int
 var MoodEmoji map[string]string
 
 func NewSocialMediaPostForm(formParams *isokit.FormParams) *SocialMediaPostForm {
-	prefillFields := []string{"caption"}
+	prefillFields := []string{"caption", "messageBody"}
 	fields := make(map[string]string)
 	errors := make(map[string]string)
 	s := &SocialMediaPostForm{}
@@ -34,7 +34,6 @@ func NewSocialMediaPostForm(formParams *isokit.FormParams) *SocialMediaPostForm 
 
 func (s *SocialMediaPostForm) Validate() bool {
 
-	println("called validate")
 	s.RegenerateErrors()
 	s.PopulateFields()
 

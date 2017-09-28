@@ -239,3 +239,11 @@ transform: rotate(45deg);
 	text-decoration: none;
 	font-weight: bold;
 }
+
+#gopherProfileContainer, #friendsListContainer {
+	margin-bottom: 18px;
+}
+
+#gopherProfileContainer {
+	margin-left: 18px;
+}

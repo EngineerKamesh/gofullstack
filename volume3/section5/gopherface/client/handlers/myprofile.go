@@ -37,14 +37,13 @@ func InitializeMyProfileEventHandlers(env *common.Env) {
 		myProfileForm = forms.NewMyProfileForm(nil)
 	}
 
-	saveProfileButton := D.GetElementByID("saveProfileButton").(*dom.HTMLButtonElement)
+	saveProfileButton := env.Document.GetElementByID("saveProfileButton").(*dom.HTMLButtonElement)
 	saveProfileButton.AddEventListener("click", false, func(event dom.Event) {
 		VerifyProfileForm(env, event, myProfileForm)
 	})
 
-	uploadInput := D.GetElementByID("imagefile").(*dom.HTMLInputElement)
+	uploadInput := env.Document.GetElementByID("imagefile").(*dom.HTMLInputElement)
 	uploadInput.AddEventListener("change", false, func(event dom.Event) {
-		println("change detected")
 		go UploadProfileImageRequest(env, event)
 	})
 
@@ -62,7 +61,6 @@ func blobToBytes(blob *js.Object) []byte {
 }
 
 func UploadProfileImageRequest(env *common.Env, event dom.Event) {
-	println("uploadImage")
 	fileElement := event.Target()
 	file := fileElement.Underlying().Get("files").Index(0)
 	b := blobToBytes(file)
@@ -73,7 +71,7 @@ func UploadProfileImageRequest(env *common.Env, event dom.Event) {
 	}
 
 	if !strings.Contains(string(data), "Error:") {
-		profileImage := D.GetElementByID("profileImage").(*dom.HTMLImageElement)
+		profileImage := env.Document.GetElementByID("profileImage").(*dom.HTMLImageElement)
 		profileImage.SetAttribute("src", string(data))
 		js.Global.Get("alertify").Call("success", "Profile image changed successfully!")
 
@@ -91,9 +89,9 @@ func VerifyProfileForm(env *common.Env, event dom.Event, profileForm *forms.MyPr
 	validationResult := profileForm.Validate()
 	if validationResult == true {
 
-		about := D.GetElementByID("aboutTextArea").(*dom.HTMLTextAreaElement).Value
-		location := D.GetElementByID("locationInput").(*dom.HTMLInputElement).Value
-		interests := D.GetElementByID("interestsInput").(*dom.HTMLInputElement).Value
+		about := env.Document.GetElementByID("aboutTextArea").(*dom.HTMLTextAreaElement).Value
+		location := env.Document.GetElementByID("locationInput").(*dom.HTMLInputElement).Value
+		interests := env.Document.GetElementByID("interestsInput").(*dom.HTMLInputElement).Value
 
 		u := models.UserProfile{}
 		u.About = about
@@ -157,7 +155,7 @@ func PopulateFriendsList(env *common.Env) {
 	var gophers []models.Gopher
 	json.Unmarshal(data, &gophers)
 
-	friendsListContainer := D.GetElementByID("friendsListContainer").(*dom.HTMLDivElement)
+	friendsListContainer := env.Document.GetElementByID("friendsListContainer").(*dom.HTMLDivElement)
 	env.TemplateSet.Render("partials/friends_list", &isokit.RenderParams{Data: gophers, Disposition: isokit.PlacementReplaceInnerContents, Element: friendsListContainer})
 
 	unfollowButtons := friendsListContainer.QuerySelectorAll(".unfollowButton")
@@ -174,7 +172,7 @@ func UnfollowGopherRequest(env *common.Env, event dom.Event) {
 	button.SetAttribute("disabled", "")
 	uuid := button.GetAttribute("data-uuid")
 	username := button.GetAttribute("data-username")
-	friendItemDiv := D.GetElementByID("followingitem_" + uuid).(*dom.HTMLDivElement)
+	friendItemDiv := env.Document.GetElementByID("followingitem_" + uuid).(*dom.HTMLDivElement)
 	textBytes, err := json.Marshal(uuid)
 
 	if err != nil {

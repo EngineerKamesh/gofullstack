@@ -15,6 +15,8 @@ import (
 	"github.com/isomorphicgo/isokit"
 )
 
+const ENTERKEY int = 13
+
 func FriendsHandler(env *common.Env) isokit.Handler {
 	return isokit.HandlerFunc(func(ctx context.Context) {
 		println("Client-side Friends Handler")
@@ -28,14 +30,14 @@ func FriendsHandler(env *common.Env) isokit.Handler {
 
 func InitializeFriendsEventHandlers(env *common.Env) {
 
-	friendSearchButton := D.GetElementByID("friendSearchButton").(*dom.HTMLButtonElement)
+	friendSearchButton := env.Document.GetElementByID("friendSearchButton").(*dom.HTMLButtonElement)
 	friendSearchButton.AddEventListener("click", false, func(event dom.Event) {
 		go FriendSearchRequest(env, event, true)
 	})
 
-	friendSearchInput := D.GetElementByID("friendSearchInput").(*dom.HTMLInputElement)
+	friendSearchInput := env.Document.GetElementByID("friendSearchInput").(*dom.HTMLInputElement)
 	friendSearchInput.AddEventListener("keypress", false, func(event dom.Event) {
-		if event.Underlying().Get("keyCode").Int() == 13 {
+		if event.Underlying().Get("keyCode").Int() == ENTERKEY {
 			event.PreventDefault()
 			go FriendSearchRequest(env, event, true)
 		}
@@ -44,9 +46,8 @@ func InitializeFriendsEventHandlers(env *common.Env) {
 }
 
 func FriendSearchRequest(env *common.Env, event dom.Event, showAlerts bool) {
-	println("friend search")
 
-	friendSearchInput := D.GetElementByID("friendSearchInput").(*dom.HTMLInputElement)
+	friendSearchInput := env.Document.GetElementByID("friendSearchInput").(*dom.HTMLInputElement)
 	searchTerm := friendSearchInput.Value
 
 	if searchTerm == "" {
@@ -76,7 +77,7 @@ func FriendSearchRequest(env *common.Env, event dom.Event, showAlerts bool) {
 		}
 	}
 
-	searchResultsContainer := D.GetElementByID("searchResultsContainer").(*dom.HTMLDivElement)
+	searchResultsContainer := env.Document.GetElementByID("searchResultsContainer").(*dom.HTMLDivElement)
 	env.TemplateSet.Render("partials/friend_search_results", &isokit.RenderParams{Data: gophers, Disposition: isokit.PlacementReplaceInnerContents, Element: searchResultsContainer})
 
 	followButtons := searchResultsContainer.QuerySelectorAll(".followButton")
@@ -104,6 +105,15 @@ func FollowGopherRequest(env *common.Env, event dom.Event) {
 		println("Encountered error while attempting to submit POST request via XHR: ", err)
 		println(err)
 	}
-	println(data)
-	println("uuid: ", uuid)
+
+	var resultErr error
+	json.Unmarshal(data, &resultErr)
+
+	if resultErr == nil {
+		js.Global.Get("alertify").Call("success", "Followed successfully!")
+
+	} else {
+		js.Global.Get("alertify").Call("error", "Follow operation failed.")
+	}
+
 }

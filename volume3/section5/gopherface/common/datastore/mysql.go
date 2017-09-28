@@ -314,8 +314,6 @@ func (m *MySQLDatastore) FetchPosts(owner string) ([]socialmedia.Post, error) {
 	posts := make([]socialmedia.Post, 0)
 	stmt, err := m.Prepare("select p.uuid, p.title, p.body, p.mood, UNIX_TIMESTAMP(p.created_ts), UNIX_TIMESTAMP(p.updated_ts), up.profile_image_path, u.username from post p, user u, user_profile up where p.uuid = u.uuid and p.uuid = up.uuid and (p.uuid = ? or p.uuid in (select friend_uuid from friend_relation where owner_uuid=?) ) order by p.created_ts desc")
 
-	//and p.uuid in (select friend_uuid from friend_relation where owner_uuid=?)
-
 	if err != nil {
 		return nil, err
 	}
