@@ -19,7 +19,9 @@ and The GopherJS Team.
 
 ## Attributions
 
-The Golang Gopher Mascot logo was designed by Renee French. 
+The Golang Gopher Mascot logo was designed by Renee French.
+
+The gopher user artwork used in the GopherFace web application is courtesy of the [Gopherize.me](http://gopherize.me) website. Artwork by Ashley McNamara. Web app by Mat Ryer.
 
 The 2D Color Gopher Drawing shown in the video, A Brief Introduction to Programming,
 was created by Takuya Ueda. 
