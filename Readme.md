@@ -1,10 +1,8 @@
 # Web Programming with Go by Kamesh Balasubramanian
 
-This is the official source code repository for the Web Programming with Go video series published by Packt.
+This is the official source code repository for the Web Programming with Go video series published by Packt. The video series teaches you how to develop full stack web applications using the Go programming language.
 
-| [![Go Essentials for Full Stack Web Development](https://raw.githubusercontent.com/EngineerKamesh/gofullstack/master/assets/V1goessentials_thumb.jpg)](https://www.packtpub.com/web-development/go-essentials-full-stack-web-development-video)  | [![Back-End Web Devleopment using Go](https://raw.githubusercontent.com/EngineerKamesh/gofullstack/master/assets/V2backendgo_thumb.png)](https://www.packtpub.com/web-development/back-end-web-development-using-go-video) | [![Front-End Web Development using Go](https://raw.githubusercontent.com/EngineerKamesh/gofullstack/master/assets/V3frontendgo_thumb.png)](https://www.packtpub.com/web-development/front-end-web-development-using-go-video) |
-|:---:|:---:|:---:|
-| Go Essentials for Full Stack Web Development | Back-End Web Devleopment using Go | Front-End Web Development using Go|
+[![Go Essentials for Full Stack Web Development](https://raw.githubusercontent.com/EngineerKamesh/gofullstack/master/assets/V1goessentials_thumb.png)](https://www.packtpub.com/web-development/go-essentials-full-stack-web-development-video)   [![Back-End Web Devleopment using Go](https://raw.githubusercontent.com/EngineerKamesh/gofullstack/master/assets/V2backendgo_thumb.png)](https://www.packtpub.com/web-development/back-end-web-development-using-go-video)  [![Front-End Web Development using Go](https://raw.githubusercontent.com/EngineerKamesh/gofullstack/master/assets/V3frontendgo_thumb.png)](https://www.packtpub.com/web-development/front-end-web-development-using-go-video) 
 
 ### 1. Go Essentials for Full Stack Web Development
 
