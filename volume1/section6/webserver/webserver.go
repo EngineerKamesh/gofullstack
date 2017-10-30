@@ -20,7 +20,7 @@ func checkUsernameSyntaxHandler(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "Username not provided!", http.StatusInternalServerError)
 	} else {
 		usernameSyntaxResult = validationkit.CheckUsernameSyntax(username)
-		fmt.Fprintf(w, "Sytnax Check Result for %v is %v", username, usernameSyntaxResult)
+		fmt.Fprintf(w, "Syntax Check Result for %v is %v", username, usernameSyntaxResult)
 	}
 
 }

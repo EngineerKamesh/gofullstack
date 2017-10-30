@@ -9,7 +9,7 @@ import "fmt"
 // first letter.
 func PrintGreetings() {
 
-	fmt.Println("I'm priting a message from the PrintGreetings() function!")
+	fmt.Println("I'm printing a message from the PrintGreetings() function!")
 }
 
 // This function is unexported (since it has a lowercase first letter in the function name)

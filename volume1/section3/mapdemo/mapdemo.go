@@ -1,4 +1,4 @@
-// An example of building a map having keys representating nations, and values representing
+// An example of building a map having keys representing nations, and values representing
 // the respective nation's capital.
 package main
 
@@ -39,7 +39,7 @@ func nationCapitalsExample() {
 
 	// Note: In Go, maps have no contract to maintain the order of the keys
 	var nationCapitals map[string]string = make(map[string]string)
-	nationCapitals["Afganistan"] = "Kabul"
+	nationCapitals["Afghanistan"] = "Kabul"
 	nationCapitals["Canada"] = "Ottawa"
 	nationCapitals["Japan"] = "Tokyo"
 	nationCapitals["Kenya"] = "Nairobi"

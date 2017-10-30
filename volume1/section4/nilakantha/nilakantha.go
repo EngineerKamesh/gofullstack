@@ -8,7 +8,7 @@ import (
 	"time"
 )
 
-// We want to create a virtual scoreboard where we can simutaneously
+// We want to create a virtual scoreboard where we can simultaneously
 // show the current value of Pi and how many Nilakantha terms we
 // have calculated.
 

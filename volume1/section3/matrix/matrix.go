@@ -10,7 +10,7 @@ func main() {
 	// Here we create a multi-dimensional array, a 3x4 matrix (3 rows, 4 columns)
 	myMatrix := [3][4]int{{1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12}}
 
-	// Let's print a value from a cell in each row of hte matrix
+	// Let's print a value from a cell in each row of the matrix
 	fmt.Println("Value at [0][0]: ", myMatrix[0][0])
 	fmt.Println("Value at [1][1]: ", myMatrix[1][1])
 	fmt.Println("Value at [2][2]: ", myMatrix[2][2])
