@@ -22,7 +22,7 @@ const (
 	MoodStateOnCloudNine
 )
 
-// AuditableContent types are meant to be embeded into types we want to keep a
+// AuditableContent types are meant to be embedded into types we want to keep a
 // check on for auditing purposes
 type AuditableContent struct {
 	TimeCreated  time.Time

@@ -51,7 +51,7 @@ func TestCheckUsernameSyntaxUnderscore(t *testing.T) {
 
 func TestCheckUsernameSyntaxAtSignInsideUsername(t *testing.T) {
 
-	// The @ sign can only be placed at the start of the username string and is invalid anyhwere else
+	// The @ sign can only be placed at the start of the username string and is invalid anywhere else
 	result := CheckUsernameSyntax("the@gopher")
 	if result != false {
 		t.Errorf("Failed the @ sign check. The @ sign was found in another place besides the start of the string.")
