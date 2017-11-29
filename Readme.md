@@ -34,5 +34,5 @@ ISBN: 9781787280946
 
 #### Take the Video Course:
 * [Packt](https://www.packtpub.com/web-development/front-end-web-development-using-go-video)
-* Safari Books
-* Udemy
+* [Safari Books](https://www.safaribooksonline.com/library/view/front-end-web-development/9781788398916/)
+* [Udemy](https://www.udemy.com/front-end-web-development-using-go/)
