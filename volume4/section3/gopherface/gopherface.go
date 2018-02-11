@@ -27,7 +27,7 @@ var WebAppRoot = os.Getenv("GOPHERFACE_APP_ROOT")
 
 func main() {
 
-	db, err := datastore.NewDatastore(datastore.MYSQL, "gopherface:gopherface@/gopherfacedb(database:3306)")
+	db, err := datastore.NewDatastore(datastore.MYSQL, "gopherface:gopherface@tcp(database:3306)/gopherfacedb")
 
 	if err != nil {
 		log.Print(err)
