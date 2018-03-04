@@ -27,3 +27,4 @@ ENTRYPOINT /go/bin/gopherface
 
 # Expose port 8080 of the container
 EXPOSE 8080
+

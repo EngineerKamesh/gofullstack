@@ -1,27 +1,32 @@
 version: '2'
 services:
   database:
-    image: "mysql"
+    image: mysql 
     ports:
        - "3306:3306"
+    volumes:
+       - ./config/gfdbdump.sql:/docker-entrypoint-initdb.d/gfdbdump.sql
     environment:
         MYSQL_ROOT_PASSWORD: rootpass
         MYSQL_USER: gopherface
         MYSQL_PASSWORD: gopherface
         MYSQL_DATABASE: gopherfacedb
-    volumes:
-    - ./config/gfdbdump.sql:/docker-entrypoint-initdb.d
   webapp:
     depends_on:
         - database 
     build: .
     ports:
         - "8080:8080"
-#  reverseproxy:
-#    depends_on:
-#        - webapp
-#    image: "nginx"
-#    volumes:
-#        - ./deployments-config/docker-single-setup/nginx.conf:/etc/nginx/nginx.conf
-#    ports:
-#        - "80:80"
+    links:
+        - database:mysql
+  reverseproxy:
+    depends_on:
+        - webapp
+    image: "nginx"
+    volumes:
+        - ./config/nginx.conf:/etc/nginx/nginx.conf
+        - ./certs/gopherfacecert.pem:/etc/nginx/certs/gopherfacecert.pem
+        - ./certs/gopherfacekey.pem:/etc/nginx/certs/gopherfacekey.pem
+    ports:
+        - "80:80"
+        - "443:443"
