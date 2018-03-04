@@ -1,0 +1,13 @@
+[Unit]
+Description=GOPHERFACE
+[Service]
+USER=gopherface
+GROUP=gopherface
+Environment=GOPHERFACE_APP_ROOT=/home/gopherface/gopherface
+Environment=GOPHERFACE_HASH_KEY=CRKVBJs0kfyeQ9Y1
+Environment=GOPHERFACE_BLOCK_KEY=9LtmRLzVH27CwxrO
+WorkingDirectory=/home/gopherface/gopherface
+ExecStart=/home/gopherface/gopherface/gopherface
+Restart=always
+[Install]
+WantedBy=multi-user.target
