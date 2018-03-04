@@ -6,7 +6,7 @@ Requires=docker.service
 Type=oneshot
 RemainAfterExit=yes
 WorkingDirectory=/opt/gofullstack/volume4/section3/gopherface
-ExecStart=/usr/bin/docker-compose -f /opt/gofullstack/volume4/section3/gopherface/docker-compose.yml up -d
-ExecStop=/usr/bin/docker-compose -f /opt/gofullstack/volume4/section3/gopherface/docker-compose.yml down
+ExecStart=/usr/local/bin/docker-compose -f /opt/gofullstack/volume4/section3/gopherface/docker-compose.yml up -d
+ExecStop=/usr/local/bin/docker-compose -f /opt/gofullstack/volume4/section3/gopherface/docker-compose.yml down
 [Install]
 WantedBy=multi-user.target
