@@ -6,7 +6,7 @@ import (
 
 	"github.com/EngineerKamesh/gofullstack/volume4/section2/gopherface/common"
 	"github.com/gorilla/mux"
-	"github.com/isomorphicgo/isokit"
+	"go.isomorphicgo.org/go/isokit"
 )
 
 func ProfileHandler(env *common.Env) http.HandlerFunc {

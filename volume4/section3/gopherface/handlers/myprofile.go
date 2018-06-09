@@ -6,7 +6,7 @@ import (
 
 	"github.com/EngineerKamesh/gofullstack/volume4/section3/gopherface/common/authenticate"
 
-	"github.com/isomorphicgo/isokit"
+	"go.isomorphicgo.org/go/isokit"
 
 	"github.com/EngineerKamesh/gofullstack/volume4/section3/gopherface/common"
 	"github.com/EngineerKamesh/gofullstack/volume4/section3/gopherface/forms"

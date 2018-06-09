@@ -3,7 +3,7 @@ package forms
 import (
 	"github.com/EngineerKamesh/gofullstack/volume3/section5/gopherface/models/socialmedia"
 
-	"github.com/isomorphicgo/isokit"
+	"go.isomorphicgo.org/go/isokit"
 )
 
 type SocialMediaPostForm struct {

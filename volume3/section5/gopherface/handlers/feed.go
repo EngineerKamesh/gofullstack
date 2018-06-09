@@ -6,7 +6,7 @@ import (
 	"github.com/EngineerKamesh/gofullstack/volume3/section5/gopherface/common"
 	"github.com/EngineerKamesh/gofullstack/volume3/section5/gopherface/forms"
 
-	"github.com/isomorphicgo/isokit"
+	"go.isomorphicgo.org/go/isokit"
 )
 
 func FeedHandler(env *common.Env) http.HandlerFunc {

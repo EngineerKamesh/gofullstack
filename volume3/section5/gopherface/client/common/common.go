@@ -1,7 +1,7 @@
 package common
 
 import (
-	"github.com/isomorphicgo/isokit"
+	"go.isomorphicgo.org/go/isokit"
 	"honnef.co/go/js/dom"
 )
 

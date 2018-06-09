@@ -9,7 +9,7 @@ import (
 	"github.com/EngineerKamesh/gofullstack/volume4/section2/gopherface/endpoints"
 	"github.com/EngineerKamesh/gofullstack/volume4/section2/gopherface/handlers"
 	"github.com/EngineerKamesh/gofullstack/volume4/section2/gopherface/middleware"
-	"github.com/isomorphicgo/isokit"
+	"go.isomorphicgo.org/go/isokit"
 
 	"net/http"
 

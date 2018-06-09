@@ -3,7 +3,7 @@ package handlers
 import (
 	"net/http"
 
-	"github.com/isomorphicgo/isokit"
+	"go.isomorphicgo.org/go/isokit"
 
 	"github.com/EngineerKamesh/gofullstack/volume3/section4/gopherface/common"
 )

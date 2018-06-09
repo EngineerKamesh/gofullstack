@@ -13,7 +13,7 @@ RUN go get -u honnef.co/go/js/dom
 RUN go get -u -d -tags=js github.com/gopherjs/jsbuiltin
 RUN go get -u honnef.co/go/js/xhr
 RUN go get -u github.com/gopherjs/websocket
-RUN go get -u github.com/isomorphicgo/isokit 
+RUN go get -u go.isomorphicgo.org/go/isokit 
 RUN go get -u github.com/EngineerKamesh/gofullstack
 
 # Transpile and install the client-side application code

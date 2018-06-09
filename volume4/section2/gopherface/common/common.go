@@ -2,7 +2,7 @@ package common
 
 import (
 	"github.com/EngineerKamesh/gofullstack/volume4/section2/gopherface/common/datastore"
-	"github.com/isomorphicgo/isokit"
+	"go.isomorphicgo.org/go/isokit"
 )
 
 type Env struct {

@@ -13,7 +13,7 @@ import (
 	"github.com/EngineerKamesh/gofullstack/volume4/section2/gopherface/models"
 	"github.com/gopherjs/gopherjs/js"
 
-	"github.com/isomorphicgo/isokit"
+	"go.isomorphicgo.org/go/isokit"
 )
 
 var myProfileForm *forms.MyProfileForm

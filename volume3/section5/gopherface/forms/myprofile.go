@@ -1,7 +1,7 @@
 package forms
 
 import (
-	"github.com/isomorphicgo/isokit"
+	"go.isomorphicgo.org/go/isokit"
 )
 
 type MyProfileForm struct {

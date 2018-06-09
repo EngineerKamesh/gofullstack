@@ -12,7 +12,7 @@ import (
 	"github.com/EngineerKamesh/gofullstack/volume3/section5/gopherface/models"
 	"github.com/gopherjs/gopherjs/js"
 
-	"github.com/isomorphicgo/isokit"
+	"go.isomorphicgo.org/go/isokit"
 )
 
 const ENTERKEY int = 13
